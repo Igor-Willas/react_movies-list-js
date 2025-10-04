@@ -5,8 +5,8 @@ export const MovieList = ({ movies }) => {
   return (
     <ul>
       {movies.map(movie => (
-        <li key={movie.imdbId}>
-          <MovieCard movie={movie} />
+        <li>
+          <MovieCard key={movie.imdbId} movie={movie} />
         </li>
       ))}
     </ul>
