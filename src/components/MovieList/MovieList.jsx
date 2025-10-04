@@ -3,12 +3,14 @@ import { MovieCard } from '../MovieCard/MovieCard';
 
 export const MovieList = ({ movies }) => {
   return (
-    <ul>
-      {movies.map(movie => (
-        <li>
-          <MovieCard key={movie.imdbId} movie={movie} />
-        </li>
-      ))}
-    </ul>
+    <div className="movies" data-cy="movie-list">
+      <ul>
+        {movies.map(movie => (
+          <li key={movie.imdbId}>
+            <MovieCard movie={movie} />
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
